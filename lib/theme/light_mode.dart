@@ -4,7 +4,7 @@ import '../utils/color_constant.dart';
 
 ColorScheme lightColorScheme = ColorScheme.light(
   surface: BackgroundColor.white, // lightest // done
-  primary: TextColor.darkBlue, // for text (say) // done
+  primary: BackgroundColor.blue, // for text (say) // done
   secondary: Colors.black, // 4th // done
   tertiary: Colors.black, // same for both modes // done
   inversePrimary: Colors.black, // darkest
@@ -102,7 +102,7 @@ ThemeData lightMode = ThemeData(
     titleTextStyle: TextStyle(color: lightColorScheme.primary, fontSize: 24),
   ),
   floatingActionButtonTheme: FloatingActionButtonThemeData(
-    backgroundColor: Colors.red,
+    backgroundColor: ButtonColor.blue,
     foregroundColor: Colors.white,
   ),
   inputDecorationTheme: InputDecorationTheme(

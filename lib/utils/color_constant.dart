@@ -6,6 +6,7 @@ class TextColor {
   static Color lightGrey = Color(0xffAAAAAA);
   static Color grey = Color(0xffC1C7D0);
   static Color brightBlue = Color(0xff007AFF);
+  static Color white = Color(0xffFFFFFF);
 }
 
 class IconColor {
@@ -34,5 +35,6 @@ class ButtonColor {
 class BackgroundColor {
   static Color white = Color(0xffFFFFFF);
   static Color lighterBlue = Color(0xffF7F8FB);
-  static Color darkBlue = Color(0xff181D2D);
+  // static Color darkBlue = Color(0xff181D2D);
+  static Color blue = Color(0xff324A59);
 }
