@@ -16,7 +16,7 @@ ColorScheme lightColorScheme = ColorScheme.light(
 );
 
 ThemeData lightMode = ThemeData(
-  fontFamily: GoogleFonts.quicksand().fontFamily, // does not work
+  fontFamily: GoogleFonts.spectral().fontFamily, // does not work
   colorScheme: ColorScheme.light(
       surface: lightColorScheme.surface, // lightest // for background
       tertiary: lightColorScheme.tertiary, // 2nd lightest
@@ -35,65 +35,65 @@ ThemeData lightMode = ThemeData(
         //https://api.flutter.dev/flutter/material/TextTheme-class.html
         displayLarge: TextStyle(
           //size 57
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         displayMedium: TextStyle(
           //size 45
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         displaySmall: TextStyle(
           //size 36
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         headlineLarge: TextStyle(
           // size 32
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         headlineMedium: TextStyle(
           // size 28
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         headlineSmall: TextStyle(
           // size 24
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         titleLarge: TextStyle(
           // size 22
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         titleMedium: TextStyle(
             // size 16
             // fontSize: 36, //done // don't change
-            fontFamily: GoogleFonts.quicksand().fontFamily,
+            fontFamily: GoogleFonts.spectral().fontFamily,
             height: 1.2),
         titleSmall: TextStyle(
           // size 14
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         bodyLarge: TextStyle(
             // size 16
             // fontSize: 18, // done // don't change
-            fontFamily: GoogleFonts.quicksand().fontFamily,
+            fontFamily: GoogleFonts.spectral().fontFamily,
             height: 1.2),
         bodyMedium: TextStyle(
           // size 14
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         bodySmall: TextStyle(
           // size 12
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         labelLarge: TextStyle(
           // size 14
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         labelMedium: TextStyle(
           // size 12
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
         labelSmall: TextStyle(
           // size 11
-          fontFamily: GoogleFonts.quicksand().fontFamily,
+          fontFamily: GoogleFonts.spectral().fontFamily,
         ),
       ),
   appBarTheme: AppBarTheme(
@@ -107,7 +107,7 @@ ThemeData lightMode = ThemeData(
   ),
   inputDecorationTheme: InputDecorationTheme(
     hintStyle: TextStyle(
-      fontFamily: GoogleFonts.quicksand().fontFamily,
+      fontFamily: GoogleFonts.spectral().fontFamily,
       color: Colors.black,
       fontSize: 18,
     ),
@@ -118,11 +118,29 @@ ThemeData lightMode = ThemeData(
     errorMaxLines: 4,
     fillColor: Colors.white,
     contentPadding: EdgeInsets.all(10),
-    enabledBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-      borderSide: const BorderSide(
-        color: Colors.grey,
-        width: 0.5,
+    // Initial state of border
+    enabledBorder: UnderlineInputBorder(
+      borderSide: BorderSide(
+        color: BorderColor.grey,
+        width: 1,
+      ),
+    ),
+    focusedBorder: UnderlineInputBorder(
+      borderSide: BorderSide(
+        color: BorderColor.brightBlue,
+        width: 1,
+      ),
+    ),
+    errorBorder: UnderlineInputBorder(
+      borderSide: BorderSide(
+        color: BorderColor.red,
+        width: 1,
+      ),
+    ),
+    focusedErrorBorder: UnderlineInputBorder(
+      borderSide: BorderSide(
+        color: BorderColor.red,
+        width: 1,
       ),
     ),
     disabledBorder: OutlineInputBorder(
@@ -131,24 +149,6 @@ ThemeData lightMode = ThemeData(
         color: Colors.grey,
         width: 0.5,
       ),
-    ),
-    focusedBorder: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(12),
-      borderSide: const BorderSide(
-        color: Colors.grey,
-      ),
-    ),
-    errorBorder: OutlineInputBorder(
-      borderSide: const BorderSide(
-        color: Colors.red,
-      ),
-      borderRadius: BorderRadius.circular(12),
-    ),
-    focusedErrorBorder: OutlineInputBorder(
-      borderSide: const BorderSide(
-        color: Colors.red,
-      ),
-      borderRadius: BorderRadius.circular(12),
     ),
   ),
   datePickerTheme: DatePickerThemeData(
