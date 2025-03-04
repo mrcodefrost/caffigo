@@ -85,9 +85,7 @@ class SignInScreen extends StatelessWidget {
                 Align(
                     alignment: Alignment.bottomRight,
                     child: ForwardNavButton(onPressed: () {
-                      // Get.toNamed(
-                      //   // RouteName.signIn,
-                      // );
+                      Get.offAllNamed(RouteName.bottomNavbar);
                     })),
                 Spacer(flex: 2),
                 TextButton(
