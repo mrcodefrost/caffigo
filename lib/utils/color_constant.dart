@@ -45,3 +45,8 @@ class BorderColor {
   static const Color brightBlue = Color(0xff007AFF);
   static const Color red = Color(0xffFF3030);
 }
+
+class BottomNavbarColor {
+  static const Color background = Color(0xff181D2D);
+  static const Color spotlight = Color(0xffFFFFFF);
+}
