@@ -2,6 +2,10 @@ import 'package:caffigo/src/auth/view/screens/forgot_password_screen.dart';
 import 'package:caffigo/src/auth/view/screens/sign_in_screen.dart';
 import 'package:caffigo/src/auth/view/screens/sign_up_screen.dart';
 import 'package:caffigo/src/auth/view/screens/verification_screen.dart';
+import 'package:caffigo/src/common/screens/bottom_nav_bar.dart';
+import 'package:caffigo/src/history/view/screens/history_screen.dart';
+import 'package:caffigo/src/menu/view/screens/menu_screen.dart';
+import 'package:caffigo/src/rewards/view/screens/rewards_screen.dart';
 import 'package:get/get.dart';
 
 import '../src/auth/view/screens/welcome_screen.dart';
@@ -12,6 +16,7 @@ class RouteName {
   static const String signUp = '/signUp';
   static const String forgotPassword = '/forgotPassword';
   static const String verification = '/verification';
+  static const String bottomNavbar = '/bottomNavbar';
   static const String cafeMap = '/cafeMap';
   static const String menu = '/menu';
   static const String orderOptions = '/orderOptions';
@@ -22,12 +27,13 @@ class RouteName {
   static const String profile = '/profile';
   static const String rewards = '/rewards';
   static const String redeem = '/redeem';
-  static const String myOrder = '/myOrder';
+  static const String history = '/history';
 }
 
 class StorePageRoute {
   static List<GetPage> mainPageRoute = [
     // 🟢 Welcome & Authentication
+
     GetPage(
       name: RouteName.welcome,
       page: () => const WelcomeScreen(),
@@ -53,17 +59,22 @@ class StorePageRoute {
       transition: Transition.rightToLeft,
     ),
 
-    // // 🟤 Cafe & Menu
+    // 🟤 Cafe & Menu
+    GetPage(
+      name: RouteName.bottomNavbar,
+      page: () => const BottomNavBar(),
+      transition: Transition.rightToLeft,
+    ),
     // GetPage(
     //   name: RouteName.cafeMap,
     //   page: () => const CafeMapScreen(),
     //   transition: Transition.fadeIn,
     // ),
-    // GetPage(
-    //   name: RouteName.menu,
-    //   page: () => const MenuScreen(),
-    //   transition: Transition.rightToLeft,
-    // ),
+    GetPage(
+      name: RouteName.menu,
+      page: () => const MenuScreen(),
+      transition: Transition.rightToLeft,
+    ),
     // GetPage(
     //   name: RouteName.coffeeCustomization,
     //   page: () => const CoffeeCustomizationScreen(),
@@ -98,11 +109,11 @@ class StorePageRoute {
     //   page: () => const ProfileScreen(),
     //   transition: Transition.rightToLeft,
     // ),
-    // GetPage(
-    //   name: RouteName.rewards,
-    //   page: () => const RewardsScreen(),
-    //   transition: Transition.rightToLeft,
-    // ),
+    GetPage(
+      name: RouteName.rewards,
+      page: () => const RewardsScreen(),
+      transition: Transition.rightToLeft,
+    ),
     // GetPage(
     //   name: RouteName.redeem,
     //   page: () => const RedeemScreen(),
@@ -110,10 +121,10 @@ class StorePageRoute {
     // ),
     //
     // // 🟠 Orders
-    // GetPage(
-    //   name: RouteName.myOrder,
-    //   page: () => const MyOrderScreen(),
-    //   transition: Transition.rightToLeft,
-    // ),
+    GetPage(
+      name: RouteName.history,
+      page: () => const HistoryScreen(),
+      transition: Transition.rightToLeft,
+    ),
   ];
 }
