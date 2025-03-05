@@ -5,9 +5,9 @@ import 'package:caffigo/src/auth/view/screens/verification_screen.dart';
 import 'package:caffigo/src/common/screens/bottom_nav_bar.dart';
 import 'package:caffigo/src/history/view/screens/history_screen.dart';
 import 'package:caffigo/src/menu/view/screens/menu_screen.dart';
+import 'package:caffigo/src/rewards/view/screens/redeem_screen.dart';
 import 'package:caffigo/src/rewards/view/screens/rewards_screen.dart';
 import 'package:get/get.dart';
-
 import '../src/auth/view/screens/welcome_screen.dart';
 
 class RouteName {
@@ -114,11 +114,11 @@ class StorePageRoute {
       page: () => const RewardsScreen(),
       transition: Transition.rightToLeft,
     ),
-    // GetPage(
-    //   name: RouteName.redeem,
-    //   page: () => const RedeemScreen(),
-    //   transition: Transition.downToUp,
-    // ),
+    GetPage(
+      name: RouteName.redeem,
+      page: () => const RedeemScreen(),
+      transition: Transition.downToUp,
+    ),
     //
     // // 🟠 Orders
     GetPage(
