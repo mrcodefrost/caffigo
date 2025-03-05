@@ -1,3 +1,4 @@
+import 'package:caffigo/utils/color_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -21,6 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     String heading = 'Empty';
+    bool showBackButton = true;
     List<Widget> actions = [];
 
     switch (title) {
@@ -46,24 +48,31 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         break;
       case AppBarTitles.rewards:
         heading = 'Rewards';
+        showBackButton = false;
         break;
       case AppBarTitles.redeem:
         heading = 'Redeem';
         break;
       case AppBarTitles.myOrder:
         heading = 'My Order';
+        showBackButton = false;
         break;
     }
 
     return AppBar(
       title: Text(heading),
-      titleTextStyle: Theme.of(context).textTheme.titleLarge,
-      leading: IconButton(
-        onPressed: () {
-          Get.back();
-        },
-        icon: Icon(Icons.arrow_back),
-      ),
+      titleTextStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
+            color: TextColor.lightBlue,
+          ),
+      leading: showBackButton
+          ? IconButton(
+              onPressed: () {
+                Get.back();
+              },
+              icon: Icon(Icons.arrow_back),
+            )
+          : null,
+      centerTitle: true,
       actions: actions,
     );
   }
