@@ -14,9 +14,10 @@ class RewardsScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 20,
           children: [
             RewardsLoyaltyCard(),
-            const SizedBox(height: 20),
             Container(
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
@@ -64,9 +65,74 @@ class RewardsScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Text(
+              'History Rewards',
+              style: context.textTheme.bodyLarge!.copyWith(
+                color: TextColor.blue,
+              ),
+            ),
+            RewardsScrollList()
           ],
         ),
       ),
+    );
+  }
+}
+
+class RewardsScrollList extends StatelessWidget {
+  const RewardsScrollList({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView.builder(
+          itemCount: 10,
+          shrinkWrap: true,
+          itemBuilder: (context, index) {
+            return Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Americano',
+                          style: context.textTheme.bodyMedium!.copyWith(
+                            color: TextColor.blue,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        const SizedBox(height: 5),
+                        Text(
+                          '16 Jun 25 | 08:00',
+                          style: context.textTheme.bodyMedium!.copyWith(
+                            color: TextColor.paleGrey,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: Text(
+                        '+12 Pts',
+                        style: context.textTheme.titleLarge!.copyWith(
+                          color: TextColor.blue,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Divider(color: DividerColor.cement),
+                const SizedBox(height: 15),
+              ],
+            );
+          }),
     );
   }
 }

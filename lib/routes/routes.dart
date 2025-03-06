@@ -3,8 +3,8 @@ import 'package:caffigo/src/auth/view/screens/sign_in_screen.dart';
 import 'package:caffigo/src/auth/view/screens/sign_up_screen.dart';
 import 'package:caffigo/src/auth/view/screens/verification_screen.dart';
 import 'package:caffigo/src/common/screens/bottom_nav_bar.dart';
-import 'package:caffigo/src/history/view/screens/history_screen.dart';
 import 'package:caffigo/src/menu/view/screens/menu_screen.dart';
+import 'package:caffigo/src/orders/view/screens/orders_screen.dart';
 import 'package:caffigo/src/rewards/view/screens/redeem_screen.dart';
 import 'package:caffigo/src/rewards/view/screens/rewards_screen.dart';
 import 'package:get/get.dart';
@@ -27,7 +27,7 @@ class RouteName {
   static const String profile = '/profile';
   static const String rewards = '/rewards';
   static const String redeem = '/redeem';
-  static const String history = '/history';
+  static const String orders = '/orders';
 }
 
 class StorePageRoute {
@@ -122,8 +122,8 @@ class StorePageRoute {
     //
     // // 🟠 Orders
     GetPage(
-      name: RouteName.history,
-      page: () => const HistoryScreen(),
+      name: RouteName.orders,
+      page: () => OrdersScreen(),
       transition: Transition.rightToLeft,
     ),
   ];
