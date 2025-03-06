@@ -1,5 +1,5 @@
-import 'package:caffigo/src/history/view/screens/history_screen.dart';
 import 'package:caffigo/src/menu/view/screens/menu_screen.dart';
+import 'package:caffigo/src/orders/view/screens/orders_screen.dart';
 import 'package:caffigo/src/rewards/view/screens/rewards_screen.dart';
 import 'package:caffigo/utils/color_constant.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class BottomNavBar extends StatelessWidget {
       pages: [
         MenuScreen(),
         RewardsScreen(),
-        HistoryScreen(),
+        OrdersScreen(),
       ],
     );
   }
