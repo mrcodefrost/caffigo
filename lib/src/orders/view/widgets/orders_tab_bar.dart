@@ -34,7 +34,7 @@ class OrdersTabBar extends StatelessWidget implements PreferredSizeWidget {
           .textTheme
           .bodyMedium
           ?.copyWith(fontWeight: FontWeight.w700),
-      unselectedLabelColor: TextColor.paleGrey,
+      unselectedLabelColor: TextColor.lightGrey,
       unselectedLabelStyle: Theme.of(context).textTheme.bodyMedium,
       isScrollable:
           true, // not required but fine, it allows for tab alignment to be at start if needed
