@@ -1,3 +1,4 @@
+import 'package:caffigo/routes/routes.dart';
 import 'package:caffigo/utils/app_constants.dart';
 import 'package:caffigo/utils/color_constant.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,9 @@ class MenuScreen extends StatelessWidget {
           children: [
             MenuAppbar(
               name: 'Frost',
-              profileOnPressed: () {},
+              profileOnPressed: () {
+                Get.toNamed(RouteName.profile);
+              },
               cartOnPressed: () {},
             ),
             Expanded(
