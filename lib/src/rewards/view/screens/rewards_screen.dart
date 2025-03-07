@@ -110,7 +110,7 @@ class RewardsScrollList extends StatelessWidget {
                         Text(
                           '16 Jun 25 | 08:00',
                           style: context.textTheme.bodyMedium!.copyWith(
-                            color: TextColor.paleGrey,
+                            color: TextColor.lightGrey,
                           ),
                         ),
                       ],
