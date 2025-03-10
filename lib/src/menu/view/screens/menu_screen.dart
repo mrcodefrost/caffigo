@@ -19,7 +19,9 @@ class MenuScreen extends StatelessWidget {
               profileOnPressed: () {
                 Get.toNamed(RouteName.profile);
               },
-              cartOnPressed: () {},
+              cartOnPressed: () {
+                Get.toNamed(RouteName.cart);
+              },
             ),
             Expanded(
               child: Container(

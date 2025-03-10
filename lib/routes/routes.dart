@@ -2,6 +2,8 @@ import 'package:caffigo/src/auth/view/screens/forgot_password_screen.dart';
 import 'package:caffigo/src/auth/view/screens/sign_in_screen.dart';
 import 'package:caffigo/src/auth/view/screens/sign_up_screen.dart';
 import 'package:caffigo/src/auth/view/screens/verification_screen.dart';
+import 'package:caffigo/src/cart/view/screens/cart_screen.dart';
+import 'package:caffigo/src/cart/view/screens/order_confirmed_screen.dart';
 import 'package:caffigo/src/common/screens/bottom_nav_bar.dart';
 import 'package:caffigo/src/menu/view/screens/menu_screen.dart';
 import 'package:caffigo/src/orders/view/screens/orders_screen.dart';
@@ -61,6 +63,7 @@ class StorePageRoute {
     ),
 
     // 🟤 Cafe & Menu
+
     GetPage(
       name: RouteName.bottomNavbar,
       page: () => const BottomNavBar(),
@@ -83,31 +86,33 @@ class StorePageRoute {
     // ),
     //
     // // 🔴 Ordering & Payment
+
     // GetPage(
     //   name: RouteName.orderOptions,
     //   page: () => const OrderOptionsScreen(),
     //   transition: Transition.rightToLeft,
     // ),
-    // GetPage(
-    //   name: RouteName.cart,
-    //   page: () => const CartScreen(),
-    //   transition: Transition.rightToLeft,
-    // ),
+    GetPage(
+      name: RouteName.cart,
+      page: () => const CartScreen(),
+      transition: Transition.rightToLeft,
+    ),
     // GetPage(
     //   name: RouteName.orderPayment,
     //   page: () => const OrderPaymentScreen(),
     //   transition: Transition.rightToLeftWithFade,
     // ),
-    // GetPage(
-    //   name: RouteName.orderConfirmed,
-    //   page: () => const OrderConfirmedScreen(),
-    //   transition: Transition.fadeIn,
-    // ),
-    //
-    // // 🔵 Profile & Rewards
+    GetPage(
+      name: RouteName.orderConfirmed,
+      page: () => const OrderConfirmedScreen(),
+      transition: Transition.rightToLeft,
+    ),
+
+    // 🔵 Profile & Rewards
+
     GetPage(
       name: RouteName.profile,
-      page: () => const ProfileScreen(),
+      page: () => ProfileScreen(),
       transition: Transition.rightToLeft,
     ),
     GetPage(
@@ -118,10 +123,11 @@ class StorePageRoute {
     GetPage(
       name: RouteName.redeem,
       page: () => const RedeemScreen(),
-      transition: Transition.downToUp,
+      transition: Transition.rightToLeft,
     ),
-    //
-    // // 🟠 Orders
+
+    // 🟠 Orders
+
     GetPage(
       name: RouteName.orders,
       page: () => OrdersScreen(),

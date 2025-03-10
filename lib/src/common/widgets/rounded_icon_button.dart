@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 class RoundedIconButton extends StatelessWidget {
   final String text;
   final void Function()? onPressed;
+  final IconData? icon;
 
-  const RoundedIconButton({super.key, required this.text, this.onPressed});
+  const RoundedIconButton(
+      {super.key, required this.text, this.onPressed, this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +23,8 @@ class RoundedIconButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(
-            Icons.shopping_cart_outlined,
+          Icon(
+            icon ?? Icons.shopping_cart_outlined,
             color: ButtonColor.white,
             size: 25,
           ),
