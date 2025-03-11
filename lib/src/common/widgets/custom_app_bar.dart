@@ -1,3 +1,4 @@
+import 'package:caffigo/routes/routes.dart';
 import 'package:caffigo/utils/color_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,14 +34,30 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         heading = 'Order';
         actions = [
           IconButton(
-              onPressed: () {}, icon: Icon(Icons.shopping_cart_outlined)),
+            onPressed: () {
+              Get.toNamed(RouteName.cart);
+            },
+            icon: Icon(
+              Icons.shopping_cart_outlined,
+              color: IconColor.lightBlue,
+              size: 26,
+            ),
+          ),
         ];
         break;
       case AppBarTitles.coffeeCustomization:
         heading = 'Customization';
         actions = [
           IconButton(
-              onPressed: () {}, icon: Icon(Icons.shopping_cart_outlined)),
+            onPressed: () {
+              Get.toNamed(RouteName.cart);
+            },
+            icon: Icon(
+              Icons.shopping_cart_outlined,
+              color: IconColor.lightBlue,
+              size: 26,
+            ),
+          ),
         ];
         break;
       case AppBarTitles.profile:
@@ -70,6 +87,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 Get.back();
               },
               icon: Icon(Icons.arrow_back),
+              iconSize: 26,
+              color: IconColor.lightBlue,
             )
           : null,
       centerTitle: true,
