@@ -6,6 +6,7 @@ import 'package:caffigo/src/cart/view/screens/cart_screen.dart';
 import 'package:caffigo/src/cart/view/screens/order_confirmed_screen.dart';
 import 'package:caffigo/src/common/screens/bottom_nav_bar.dart';
 import 'package:caffigo/src/menu/view/screens/menu_screen.dart';
+import 'package:caffigo/src/orders/view/screens/order_options_screen.dart';
 import 'package:caffigo/src/orders/view/screens/orders_screen.dart';
 import 'package:caffigo/src/profile/view/screens/profile_screen.dart';
 import 'package:caffigo/src/rewards/view/screens/redeem_screen.dart';
@@ -87,11 +88,11 @@ class StorePageRoute {
     //
     // // 🔴 Ordering & Payment
 
-    // GetPage(
-    //   name: RouteName.orderOptions,
-    //   page: () => const OrderOptionsScreen(),
-    //   transition: Transition.rightToLeft,
-    // ),
+    GetPage(
+      name: RouteName.orderOptions,
+      page: () => OrderOptionsScreen(),
+      transition: Transition.rightToLeft,
+    ),
     GetPage(
       name: RouteName.cart,
       page: () => const CartScreen(),
