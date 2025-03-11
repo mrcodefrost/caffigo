@@ -29,6 +29,7 @@ class DividerColor {
 class ButtonColor {
   static const Color blue = Color(0xff324A59);
   static const Color lameBlue = Color(0xff476374);
+  static const Color brightBlue = Color(0xff007AFF);
   static const Color paleGrey = Color(0xffD8D8D8);
   static const Color white = Color(0xffFFFFFF);
   static const Color gradientPurple = Color(0xffC58BF2);
