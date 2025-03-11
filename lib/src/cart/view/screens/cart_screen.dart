@@ -1,8 +1,10 @@
+import 'package:caffigo/routes/routes.dart';
 import 'package:caffigo/src/common/widgets/custom_app_bar.dart';
 import 'package:caffigo/src/common/widgets/rounded_icon_button.dart';
 import 'package:caffigo/utils/app_constants.dart';
 import 'package:caffigo/utils/color_constant.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -292,7 +294,10 @@ void showMyBottomSheet(BuildContext context) {
                   text: 'Pay Now',
                   icon: Icons.credit_card_outlined,
                   onPressed: () {
-                    showMyBottomSheet(context);
+                    Get.offNamedUntil(
+                      RouteName.orderConfirmed,
+                      ModalRoute.withName(RouteName.bottomNavbar),
+                    );
                   },
                 ),
               ],
