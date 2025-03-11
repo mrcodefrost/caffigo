@@ -27,7 +27,7 @@ class MenuScreen extends StatelessWidget {
               child: Container(
                 width: double.maxFinite,
                 decoration: BoxDecoration(
-                  color: BackgroundColor.blue,
+                  color: BackgroundColor.lighterBlue,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30),
                     topRight: Radius.circular(30),
@@ -42,7 +42,7 @@ class MenuScreen extends StatelessWidget {
                       Text(
                         'Select your items',
                         style: context.textTheme.bodyLarge!.copyWith(
-                          color: TextColor.paleGrey,
+                          color: TextColor.lightBlue,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
@@ -58,30 +58,36 @@ class MenuScreen extends StatelessWidget {
                             childAspectRatio: 0.9, // Adjust based on design
                           ),
                           itemBuilder: (context, index) {
-                            return Container(
-                              padding: EdgeInsets.all(8),
-                              decoration: BoxDecoration(
-                                color: BackgroundColor.lighterBlue,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset(
-                                    AppImages.mugCoffee,
-                                    height: 90, // Adjust size
-                                    fit: BoxFit.cover,
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    'Americano',
-                                    style:
-                                        context.textTheme.bodyMedium!.copyWith(
-                                      color: TextColor.lightBlue,
-                                      fontWeight: FontWeight.w600,
+                            return InkWell(
+                              onTap: () {
+                                Get.toNamed(RouteName.orderOptions);
+                              },
+                              child: Container(
+                                padding: EdgeInsets.all(8),
+                                decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: BackgroundColor.blue),
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      AppImages.mugCoffee,
+                                      height: 90, // Adjust size
+                                      fit: BoxFit.cover,
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      'Americano',
+                                      style: context.textTheme.bodyMedium!
+                                          .copyWith(
+                                        color: TextColor.lightBlue,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             );
                           },
@@ -142,11 +148,13 @@ class MenuAppbar extends StatelessWidget {
           IconButton(
             onPressed: cartOnPressed,
             icon: Icon(Icons.shopping_cart_outlined),
+            color: IconColor.lightBlue,
             iconSize: 26,
           ),
           IconButton(
             onPressed: profileOnPressed,
             icon: Icon(Icons.person_outline),
+            color: IconColor.lightBlue,
             iconSize: 26,
           ),
         ],
